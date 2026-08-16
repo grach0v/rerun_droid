@@ -8,9 +8,9 @@ Can also be used for training VLAs (System 2) to follow grounded information.
 
 ## Example
 
-<video src="https://raw.githubusercontent.com/grach0v/rerun_droid/main/media/example.mp4" controls muted loop playsinline width="100%"></video>
+![Droid episode in the rerun viewer, with the future gripper path and the next grasp point drawn on every camera](media/example.gif)
 
-(if the player does not show up, open [media/example.mp4](media/example.mp4))
+Full-resolution mp4 of the same clip: [media/example.mp4](media/example.mp4).
 
 # Running
 
