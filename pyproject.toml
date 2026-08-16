@@ -1,0 +1,32 @@
+[project]
+name = "rerun-droid"
+version = "0.1.0"
+description = "Download raw DROID episodes and convert them to Rerun recordings"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "av>=18.1.0",
+    "gcsfs>=2025.3.0",
+    "h5py>=3.12",
+    # <7 because rerun-sdk[notebook] 0.34.1 requires ipykernel<7.0.0.
+    "ipykernel>=6.29,<7",
+    "ipywidgets>=8.1.8",
+    "matplotlib>=3.11.1",
+    "nbqa[toolchain]>=1.9.1",
+    "numpy>=1.26",
+    "pyarrow>=18",
+    # The [datafusion] extra is what rr.catalog.CatalogClient needs; it also pins a
+    # datafusion version rerun accepts (0.34.1 rejects 54.x).
+    "rerun-sdk[datafusion,notebook]==0.34.1",
+    "ruff>=0.16.3",
+    "scipy>=1.17.1",
+]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["osx-arm64"]
+
+[tool.pixi.pypi-dependencies]
+rerun-droid = { path = ".", editable = true }
+
+[tool.pixi.tasks]
