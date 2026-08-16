@@ -1,7 +1,7 @@
 # Droid Rerun
 
 Little experiments with droid, rerun and data augmentation.  
-Main idea, draw on the frames trajectory and point of the next gripper interaction.  
+Main idea, project trajectories till the next gripper action and the point where it happens onto the camera.  
 This is very cheap and easy operation for already collected data.  
 Can be used for training VLMs (System 1) to predict which object to interact with.  
 Can also be used for training VLAs (System 2) to follow grounded information.  
